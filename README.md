@@ -3,7 +3,7 @@
 **A hands-on web application security assessment demonstrating unauthorized cross-user account access through session-token manipulation.**
 
 
-## Project Overview
+## 🧭 Project Overview
 
 This project documents a practical web application security lab performed on VulnBank.org to investigate horizontal privilege escalation and weaknesses in session-based access control.
 
@@ -13,7 +13,7 @@ The test demonstrated that replacing Mike's session cookie with Mary's token cau
 
 This highlighted the importance of secure session management and server-side authorization checks.
 
-## Objectives
+## 🎯 Objectives
 
 - Understand horizontal privilege escalation in web applications.
 - Examine how session tokens influence authenticated user access.
@@ -21,7 +21,7 @@ This highlighted the importance of secure session management and server-side aut
 - Document the observed security impact.
 - Recommend measures to prevent unauthorized cross-user access.
 
-## Tools and Environment
+## 🛠️ Tools and Environment
 
 | Component    | Purpose                                        |
 | ------------ | ---------------------------------------------- |
@@ -29,7 +29,7 @@ This highlighted the importance of secure session management and server-side aut
 | Burp Suite   | HTTP interception and session testing          |
 | Web browser  | User authentication and dashboard verification |
 
-## Methodology
+## 🔬 Methodology
 
 1. **Establish a baseline:** Logged in as Mary and observed her authenticated dashboard.
 2. **Inspect another session:** Logged in as Mike and examined the session cookie using Burp Suite.
@@ -37,7 +37,7 @@ This highlighted the importance of secure session management and server-side aut
 4. **Verify the result:** Refreshed the application and observed that Mary's dashboard appeared in the session being tested.
 5. **Analyze the impact:** Considered the implications for session isolation and authorization between different users.
 
-## Evidence
+## 📸 Evidence
 
 ### Video Demonstration
 
@@ -55,7 +55,7 @@ This shows Mary's login request and the server's response containing a session t
 
 <img width="1266" height="342" alt="Mike project token" src="https://github.com/user-attachments/assets/5e010788-bc08-45b8-887e-9554cdb8052a" />
 
-## Security Analysis
+## 🔍 Security Analysis
 
 The observed behavior indicates that a session-token substitution could result in access to another user's authenticated dashboard in the tested environment.
 
@@ -63,7 +63,7 @@ Horizontal privilege escalation involves gaining unauthorized access to resource
 
 The precise underlying vulnerability cannot be established from the dashboard result alone. Further authorized testing would be needed to determine whether the issue originates from session validation, token handling, authorization enforcement, or another application weakness.
 
-## Recommended Remediation
+## 🛡️ Recommended Remediation
 
 - **Enforce server-side authorization:** Verify that every requested resource belongs to the authenticated user or that access is explicitly authorized.
 - **Protect session tokens:** Use secure cookie attributes, HTTPS, appropriate token lifetimes, and safe session invalidation.
@@ -71,7 +71,7 @@ The precise underlying vulnerability cannot be established from the dashboard re
 - **Validate object ownership:** Check user permissions on every sensitive request instead of relying on client-side controls.
 - **Log suspicious activity:** Monitor unexpected session changes and repeated unauthorized access attempts.
 
-## Key Learnings
+## 🧠 Key Learnings
 
 Through this exercise, I gained practical experience with:
 
@@ -81,11 +81,11 @@ Through this exercise, I gained practical experience with:
 - Recognizing potential access-control weaknesses.
 - Documenting security findings and proposing remediation.
 
-## Ethical Scope
+## ⚖️ Ethical Scope
 
 This project is intended for educational and portfolio purposes. Testing should only be conducted in an authorized lab or environment where explicit permission has been granted. No real user credentials or session tokens should be published.
 
-## Author
+## 👨‍💻 Author
 
 **Samuel Miracle**
 Cybersecurity | Web Application Security | Penetration Testing
